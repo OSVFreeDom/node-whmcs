@@ -10,7 +10,7 @@ var WHMCS = function(options) {
 
   this.utils = require('./lib/utils');
 
-  ['username', 'serverUrl'].forEach(function(required) {
+  ['identifier','secret', 'serverUrl'].forEach(function(required) {
     if (!options[required]) {
       throw new Error('options.' + required + ' is a required argument.');
     }
